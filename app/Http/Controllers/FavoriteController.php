@@ -85,6 +85,7 @@ class FavoriteController extends Controller
      */
     public function destroy(Favorite $favorite)
     {
-        //
+        $favorite->delete();
+        return redirect()->route('favorites.index');
     }
 }

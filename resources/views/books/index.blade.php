@@ -11,7 +11,7 @@
                         <a class="btn btn-outline-primary float-end" href="{{ route('books.create') }}">{{ __('Add new book') }}</a>
                         @endcan
                             <hr>
-                        <h5>{{ __('Book searh') }}</h5>
+                        <h5>{{ __('Book search') }}</h5>
                         <form method="post" action="{{ route('books.find') }}">
                             @csrf
                             <div class="mb-3">

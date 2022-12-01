@@ -12,6 +12,7 @@
                             <tr>
                                 <th>Name</th>
                                 <th>Book</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -20,6 +21,13 @@
                                 <tr>
                                <td>{{$favorite->user_id}}</td>
                                <td>{{$favorite->book_id}}</td>
+                                    <td>
+                                        <form method="post" action="{{ route('favorites.destroy', $favorite->id) }}">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn btn-outline-danger">Remove favorite</button>
+                                        </form>
+                                    </td>
                                 </tr>
                                 @endif
                             @endforeach
